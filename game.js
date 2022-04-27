@@ -41,9 +41,3 @@ function checkDeath() {
     gameOver = outsideGrid(getSnakeHead()) || snakeIntersection()
   }
 
-  [snakeIntersection.length - 1];
-        if (getSnakeHead == food) {
-          // Increase score
-          score++;
-          scoreElement.innerText = hardMode ? `H ${score}` : score;
-        }

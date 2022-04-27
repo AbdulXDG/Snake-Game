@@ -1,5 +1,6 @@
-import { onSnake, expandSnake } from './snake.js'
+import { onSnake, expandSnake, snakeIntersection } from './snake.js'
 import { randomGridPosition } from './grid.js'
+
 
 let food =
     getRandomFoodPosition()
@@ -29,4 +30,11 @@ function getRandomFoodPosition() {
         newFoodPosition = randomGridPosition()
     }
     return newFoodPosition
+}
+
+[snakeIntersection.length - 1];
+if (getSnakeHead == getRandomPosition) {
+  // Increase score
+  score++;
+  scoreElement.innerText = hardMode ? `H ${score}` : score;
 }
