@@ -41,7 +41,7 @@ function checkDeath() {
     gameOver = outsideGrid(getSnakeHead()) || snakeIntersection()
   }
 
-  const getSnakeHead = snakeIntersection[snakeIntersection.length - 1];
+  [snakeIntersection.length - 1];
         if (getSnakeHead == food) {
           // Increase score
           score++;
