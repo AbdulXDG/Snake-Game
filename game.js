@@ -1,5 +1,5 @@
 import { update as updateSnake, draw as drawSnake, SNAKE_SPEED, getSnakeHead, snakeIntersection} from "./snake.js"
-import { update as updateFood, draw as drawFood } from './food.js'
+import { update as updateFood, draw as drawFood, food as getRandomFoodPosition } from './food.js'
 import { outsideGrid } from './grid.js'
 
 let lastRenderTime = 0
@@ -40,3 +40,10 @@ function draw() {
 function checkDeath() {
     gameOver = outsideGrid(getSnakeHead()) || snakeIntersection()
   }
+
+  const getSnakeHead = snakeIntersection[snakeIntersection.length - 1];
+        if (getSnakeHead == food) {
+          // Increase score
+          score++;
+          scoreElement.innerText = hardMode ? `H ${score}` : score;
+        }
